@@ -1,11 +1,11 @@
+//define NEWSAPi key
+const NEWSAPI_KEY = '63eedf2b340b4860808c63449b493a23'
+
 const News = require('./news')
 
 const express = require('express')
 const { engine } = require('express-handlebars')
 const morgan = require('morgan')
-
-//define NEWSAPi key
-const NEWSAPI_KEY = "63eedf2b340b4860808c63449b493a23"
 
 
 const port = parseInt(process.env.PORT) || 3000
