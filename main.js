@@ -4,8 +4,12 @@ const express = require('express')
 const { engine } = require('express-handlebars')
 const morgan = require('morgan')
 
+//define NEWSAPi key
+const NEWSAPI_KEY = "63eedf2b340b4860808c63449b493a23"
+
+
 const port = parseInt(process.env.PORT) || 3000
-const newsKey = process.env.NEWSAPI_KEY 
+const newsKey = NEWSAPI_KEY 
 
 const app = express();
 const news = new News(newsKey)
@@ -27,6 +31,9 @@ app.get(['/', '/index.html'], (req, resp) => {
 			})
 		})
 })
+
+
+
 
 app.get('/healthz', (_, resp) => {
 	resp.contentType("application/json")
